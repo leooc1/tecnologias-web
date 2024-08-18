@@ -35,3 +35,11 @@ main>ul {
     height: 360px;
     object-fit: cover;
 }
+
+@media (max-width: 768px) {
+
+    .sede,
+    .equipe {
+        grid-template-columns: 1fr;
+    }
+}

@@ -4,26 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapéus do Rei dos Piratas | Contato</title>
-    <link rel="shortcut icon" href="https://tr.rbxcdn.com/52f22bc0a7a5b0c3ff6be1b122139e19/420/420/Hat/Png" type="image/x-icon">
+    <title>Chapéus do Rei dos Piratas</title>
+    <link rel="shortcut icon" href="https://tr.rbxcdn.com/52f22bc0a7a5b0c3ff6be1b122139e19/420/420/Hat/Png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./contact.css">
 </head>
 
 <body>
     <header>
+        <h1>
+            <img class="logo" src="https://tr.rbxcdn.com/52f22bc0a7a5b0c3ff6be1b122139e19/420/420/Hat/Png" alt="logo">
+            Chapéus do Rei dos Piratas
+        </h1>
         <nav>
             <ul>
-                <li><a href="/">HOME</a></li>
+                <li><a href="./index.html">HOME</a></li>
                 <li><a href="./products.html">PRODUTOS</a></li>
-                <li><a href="./contact.html">CONTATO</a></li>
+                <li class="nav-active"><a href="./contact.html">CONTATO</a></li>
             </ul>
         </nav>
     </header>
     <main>
-
+        <form action="#" id="form">
+            <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+            <input type="email" name="email" id="email" placeholder="email@email.email">
+            <input type="tel" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx">
+            <textarea name="msg" id="msg" placeholder="Sua Mensagem"></textarea>
+            <button type="submit" style="cursor: pointer;">Enviar Mensagem</button>
+        </form>
     </main>
     <footer>
-
+        &copy; Leonardo Oliveira de Castro
     </footer>
+    <script>
+        const form = document.getElementById('form')
+        form.addEventListener('submit', (e)=>{e.preventDefault()})
+    </script>
 </body>
 
 </html>
