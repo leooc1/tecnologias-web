@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidade</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="cidade.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="./home.html">HOME</a>
+            </li>
+            <li>
+                <a href="#">CADASTROS</a>
+            </li>
+            <li class="nav-i">
+                <a href="#" style="color: #000;">CIDADE</a>
+            </li>
+            <li class="nav-i">
+                <a href="#">ESTADO</a>
+            </li>
+            <li class="nav-i">
+                <a href="#">PAÍS</a>
+            </li>
+            <li class="nav-i">
+                <a href="#">USUÁRIO</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            Cadastro de cidade
+        </header>
+        <section>
+            <div>
+                <form action="./index.html">
+                    <label for="nome">
+                        Nome
+                        <input type="text" name="nome" id="nome">
+                    </label>
+                    <div style="display: grid;
+                    grid-template-columns: 100px 1fr;
+                    gap: 20px;">
+                        <label for="estado">
+                            Estado
+                            <input type="text" name="estado" id="estado">
+                        </label>
+                        <label for="codigo">
+                            Código do Município
+                            <input type="text" name="codigo" id="codigo">
+                        </label>
+                    </div>
+                    <label for="regiao">
+                        Região
+                        <input type="text" name="regiao" id="regiao">
+                    </label>
+                </form>
+                <section class="buttons">
+                    <button class="blu">BUSCAR</button>
+                    <button class="red">EXCLUIR</button>
+                    <button class="uai">CANCELAR</button>
+                    <button class="blu">SALVAR</button>
+                </section>
+            </div>
+        </section>
+        <footer>
+            SISTEMA DE ARMAZENAMENTO GEOGRAFICO - 2024
+        </footer>
+    </main>
+</body>
+
+</html>
