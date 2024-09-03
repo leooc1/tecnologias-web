@@ -1,0 +1,45 @@
+main {
+    padding: 0 20px;
+}
+
+section>h2 {
+    margin-bottom: 12px;
+}
+
+main>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.equipe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.equipe>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sede {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.sede>img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+    .sede,
+    .equipe {
+        grid-template-columns: 1fr;
+    }
+}
