@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de contato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-200 max-w-screen min-h-screen flex justify-center items-center">
+    <form action="#" id="form" class="bg-white shadow-zinc-400 shadow-lg p-4 rounded-lg flex flex-col gap-4 w-80">
+        <h1 class="flex flex-col text-2xl font-bold text-center"> Formulário de contato</h1>
+        <label class="flex flex-col text-xl font-semibold" for="nome">
+            Nome:
+            <input type="text" name="nome" id="nome" class="border-2 border-zinc-300 rounded-lg py-1 px-2 outline-none" oninput="writeName()">
+            <p class="font-base text-sm text-red-400 opacity-0">Nome não preenchido</p>
+        </label>
+        <label class="flex flex-col text-xl font-semibold" for="email">
+            E-mail:
+            <input type="email" name="email" id="email" class="border-2 border-zinc-300 rounded-lg py-1 px-2 outline-none" oninput="writeEmail()">
+            <p class="font-base text-sm text-red-400 opacity-0">E-mail não preenchido</p>
+        </label>
+        <label class="flex flex-col text-xl font-semibold" for="mensagem">
+            Mensagem:
+            <textarea name="mensagem" id="mensagem" class="border-2 border-zinc-300 rounded-lg py-1 px-2 outline-none min-h-10" oninput="writeMessage()"></textarea>
+            <p class="font-base text-sm text-red-400 opacity-0">Mensagem não preenchida</p>
+        </label>
+        <button type="submit" class="bg-emerald-400 text-white text-xl rounded-lg py-1 px-2 w-fit">Enviar</button>
+    </form>
+    <script src="./script.js"></script>
+</body>
+
+</html>
