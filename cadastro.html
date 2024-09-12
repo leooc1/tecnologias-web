@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de contato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white max-w-screen min-h-screen">
+    <header class="text-white bg-cyan-300 font-medium text-xl py-2 px-8">
+        Cadastro de Contato
+    </header>
+    <main class="w-full bg-zinc-100 min-h-[calc(100vh-88px)] px-5 pt-10">
+        <div class="flex flex-col md:flex-row gap-4 w-fit h-fit">
+            <form action="#" class="bg-zinc-300 grid grid-cols-2 h-fit gap-4 p-4">
+                <label for="nome" class="flex flex-col text-white text-xl">
+                    Nome
+                    <input disabled type="text" class="text-xl py-1 px-2 text-black" name="nome" id="nome">
+                </label>
+                <label for="sobrenome" class="flex flex-col text-white text-xl">
+                    Sobrenome
+                    <input disabled type="text" class="text-xl py-1 px-2 text-black" name="sobrenome" id="sobrenome">
+                </label>
+                <label for="endereco" class="col-span-2 flex flex-col text-white text-xl">
+                    Endereço
+                    <input disabled type="text" class="text-xl py-1 px-2 text-black" name="endereco" id="endereco"
+                        class="w-full">
+                </label>
+                <label for="telefone" class="flex flex-col text-white text-xl">
+                    Telefone
+                    <input disabled type="tel" class="text-xl py-1 px-2 text-black" name="telefone" id="telefone">
+                </label>
+                <input disabled type="hidden" name="index" id="index">
+            </form>
+            <section class="flex md:flex-col justify-between">
+                <button id="incluir" class="text-xs md:text-lg uppercase w-18 py-1 px-2 bg-green-600 text-white" onclick="incluir()">
+                    incluir</button>
+                <button id="editar" class="text-xs md:text-lg uppercase w-18 py-1 px-2 bg-orange-400 text-white" onclick="editar()">
+                    editar</button>
+                <button id="salvar" class="text-xs md:text-lg uppercase w-18 py-1 px-2 bg-cyan-400 text-white brightness-75 cursor-no-drop" onclick="salvar()">
+                    salvar</button>
+                <button id="cancelar" class="text-xs md:text-lg uppercase w-18 py-1 px-2 bg-white text-cyan-400 border border-cyan-400 brightness-75 cursor-no-drop" onclick="cancelar()">
+                    cancelar</button>
+                <button id="excluir" class="text-xs md:text-lg uppercase w-18 py-1 px-2 bg-red-500 text-white" onclick="excluir()">
+                    excluir</button>
+            </section>
+        </div>
+        <section class="flex mt-4 gap-4 justify-center md:justify-start md:gap-16">
+            <button class="bg-black text-white w-14 py-1 px-2" onclick="initialContato()">|&lt;</button>
+            <button class="bg-black text-white w-14 py-1 px-2" onclick="prevContato()">&lt;</button>
+            <button class="bg-black text-white w-14 py-1 px-2" onclick="nextContato()">&gt;</button>
+            <button class="bg-black text-white w-14 py-1 px-2" onclick="lastContato()">&gt;|</button>
+        </section>
+    </main>
+    <footer class="bg-white text-cyan-300 font-medium text-xl text-center py-2 px-8 uppercase">
+        agenda de contatos
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
