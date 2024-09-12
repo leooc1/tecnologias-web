@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-100 max-w-screen min-h-screen">
+    <header class="bg-white text-cyan-300 uppercase text-center font-medium text-xl py-2">
+        agenda de contatos
+    </header>
+    <main class="flex justify-center items-center w-full min-h-[calc(100vh-44px)]">
+        <form id="form" action="#" class="bg-zinc-200 shadow-zinc-400 shadow-lg py-6 px-4 flex flex-col items-center gap-4 w-80">
+            <div class="w-28 h-28 bg-white flex justify-center items-center mb-5">LOGO</div>
+            <input type="text" name="user" id="user" class="text-xl py-1 w-full px-2 placeholder:text-zinc-300" placeholder="USUÁRIO">
+            <input type="password" name="senha" id="senha" class="text-xl py-1 w-full px-2 placeholder:text-zinc-300" placeholder="SENHA">
+            <button class="text-xl py-1 px-2 bg-cyan-400 text-white">ENTRAR</button>
+        </form>
+    </main>
+    <script>
+        const form = document.getElementById('form')
+        const user = document.getElementById('user')
+        const senha = document.getElementById('senha')
+
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault()
+            if(user.value.toLowerCase() == 'paulim' && senha.value == '123123'){
+                alert('Login correto!')
+                location.assign('/cadastro.html')
+
+            }
+            else{
+                alert('Login incorreto!')
+                user.value = ''
+                senha.value = ''
+            }
+        })
+    </script>
+</body>
+
+</html>
